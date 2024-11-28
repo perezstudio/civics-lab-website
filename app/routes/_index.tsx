@@ -2,8 +2,8 @@ import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Civics Lab" },
+    { name: "description", content: "At Civics Lab, we specialize in innovative tools and expert services tailored for campaigns, county parties, and civic organizations. From strategic planning to design and education, we’re your partner in building stronger movements and driving meaningful change. Explore our suite of solutions designed to make organizing smarter, faster, and more impactful." },
   ];
 };
 
