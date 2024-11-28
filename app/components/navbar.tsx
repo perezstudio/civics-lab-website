@@ -3,15 +3,10 @@ import { Link } from '@remix-run/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Button from './ui/button'
+import { navigationItems } from '~/lib/navigation'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
-
-  const menuItems = {
-    Products: ['Product 1', 'Product 2', 'Product 3'],
-    Solutions: ['Solution 1', 'Solution 2', 'Solution 3'],
-    Resources: ['Resource 1', 'Resource 2', 'Resource 3'],
-  }
 
   return (
     <nav className="fixed w-full z-50 bg-white">
@@ -49,26 +44,67 @@ const NavBar = () => {
             
             {/* Desktop Navigation - Left Side */}
             <div className="flex items-center space-x-8">
-              {Object.entries(menuItems).map(([category, items]) => (
-                <div key={category} className="relative group">
-                  <button className="text-gray-800 hover:text-gray-600 px-3 py-2">
-                    {category}
-                  </button>
-                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                    <div className="py-1">
-                      {items.map((item) => (
-                        <Link
-                          key={item}
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          {item}
-                        </Link>
-                      ))}
-                    </div>
+              {/* Products Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-800 hover:text-gray-600 px-3 py-2">
+                  Products
+                </button>
+                <div className="absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="p-4 space-y-4">
+                    {navigationItems.products.map((product) => (
+                      <Link
+                        key={product.name}
+                        to={product.href}
+                        className="flex items-start space-x-4 p-3 hover:bg-gray-50 rounded-lg"
+                      >
+                        <img 
+                          src={product.icon} 
+                          alt="" 
+                          className="w-6 h-6 mt-1"
+                        />
+                        <div>
+                          <div className="font-medium text-gray-900">{product.name}</div>
+                          <p className="text-sm text-gray-500">{product.description}</p>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Solutions Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-800 hover:text-gray-600 px-3 py-2">
+                  Solutions
+                </button>
+                <div className="absolute left-0 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="p-4">
+                    {navigationItems.solutions.map((section) => (
+                      <div key={section.heading} className="mb-6 last:mb-0">
+                        <h3 className="font-semibold text-gray-900 px-3 mb-2">
+                          {section.heading}
+                        </h3>
+                        <div className="space-y-1">
+                          {section.items.map((item) => (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              className="flex items-center space-x-3 px-3 py-2 hover:bg-gray-50 rounded-lg"
+                            >
+                              <img 
+                                src={item.icon} 
+                                alt="" 
+                                className="w-5 h-5"
+                              />
+                              <span className="text-gray-700">{item.name}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -100,25 +136,61 @@ const NavBar = () => {
             </div>
 
             {/* Menu content */}
-            <div className="px-2 pt-16 pb-3 space-y-1"> {/* Added pt-16 to account for close button */}
-              {Object.entries(menuItems).map(([category, items]) => (
-                <div key={category} className="space-y-1">
-                  <button className="w-full text-left text-white px-3 py-2">
-                    {category}
-                  </button>
-                  <div className="pl-4 space-y-1">
-                    {items.map((item) => (
-                      <Link
-                        key={item}
-                        href="#"
-                        className="block text-white px-3 py-2 text-base"
-                      >
-                        {item}
-                      </Link>
-                    ))}
-                  </div>
+            <div className="px-4 pt-16 pb-6 space-y-6">
+              {/* Mobile Products Menu */}
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-3">Products</h3>
+                <div className="space-y-2">
+                  {navigationItems.products.map((product) => (
+                    <Link
+                      key={product.name}
+                      to={product.href}
+                      className="flex items-start space-x-4 p-3 hover:bg-gray-50 rounded-lg"
+                    >
+                      <img 
+                        src={product.icon} 
+                        alt="" 
+                        className="w-6 h-6 mt-1"
+                      />
+                      <div>
+                        <div className="font-medium text-gray-900">{product.name}</div>
+                        <p className="text-sm text-gray-500">{product.description}</p>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Mobile Solutions Menu */}
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-3">Solutions</h3>
+                <div className="space-y-2">
+                  {navigationItems.solutions.map((section) => (
+                    <div key={section.heading} className="mb-6 last:mb-0">
+                      <h3 className="font-semibold text-gray-900 px-3 mb-2">
+                        {section.heading}
+                      </h3>
+                      <div className="space-y-1">
+                        {section.items.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className="flex items-center space-x-3 px-3 py-2 hover:bg-gray-50 rounded-lg"
+                          >
+                            <img 
+                              src={item.icon} 
+                              alt="" 
+                              className="w-5 h-5"
+                            />
+                            <span className="text-gray-700">{item.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <Button type="ghost" to="/login">Login</Button>
               <Button type="primary" to="/contact">Contact Sales</Button>
             </div>
