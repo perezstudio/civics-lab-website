@@ -1,11 +1,12 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import Button from '~/components/ui/button'
+import { serviceColors, type ServiceName } from '~/lib/services'
 
 interface ContentSectionProps {
   subheading?: string
   service?: {
-    name: string
-    icon: ReactNode
+    name: ServiceName
+    iconSrc: string
   }
   heading: string
   body: string
@@ -37,12 +38,12 @@ const ContentSection: FC<ContentSectionProps> = ({
   return (
     <section className="relative overflow-hidden py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-center">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:items-center">
           {/* Content Side */}
           <div className="max-w-xl">
             {/* Optional Subheading */}
             {subheading && (
-              <span className="block text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">
+              <span className="block text-blue-600 font-caveat font-bold text-xl mb-3">
                 {subheading}
               </span>
             )}
@@ -50,10 +51,14 @@ const ContentSection: FC<ContentSectionProps> = ({
             {/* Optional Service */}
             {service && (
               <div className="flex items-center space-x-2 mb-4">
-                <div className="flex-shrink-0 h-6 w-6 text-blue-600">
-                  {service.icon}
+                <div className="flex-shrink-0 h-6 w-6">
+                  <img 
+                    src={service.iconSrc}
+                    alt=""
+                    className="h-full w-full object-contain"
+                  />
                 </div>
-                <span className="text-gray-600 font-medium">
+                <span className={`font-medium ${serviceColors[service.name]}`}>
                   {service.name}
                 </span>
               </div>
@@ -95,14 +100,12 @@ const ContentSection: FC<ContentSectionProps> = ({
           </div>
 
           {/* Image Side */}
-          <div className="mt-12 lg:mt-0">
-            <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-              <img
-                className="w-full h-full object-cover rounded-lg"
-                src={image.src}
-                alt={image.alt}
-              />
-            </div>
+          <div className="relative w-full h-[50vh] lg:min-h-[500px] lg:h-full mt-8 lg:mt-0 overflow-hidden rounded-2xl">
+            <img
+              className="absolute inset-0 w-full h-full object-cover"
+              src={image.src}
+              alt={image.alt}
+            />
           </div>
         </div>
       </div>

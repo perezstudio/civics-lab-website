@@ -1,11 +1,14 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      maxWidth: {
+        '7xl': '1200px',
+      },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'], // This makes Inter the default font
+        sans: ['Inter', 'system-ui', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         caveat: ['Caveat', 'cursive'],
       },

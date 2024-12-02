@@ -9,8 +9,8 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed w-full z-50 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed w-full z-50 bg-white px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="flex items-center justify-between h-16">
           {/* Mobile Layout */}
           <div className="flex w-full items-center justify-between md:hidden">
