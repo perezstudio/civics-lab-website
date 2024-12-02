@@ -56,33 +56,63 @@ export const navigationItems = {
   ],
   solutions: [
     {
-      heading: "By Industry",
+      heading: "By Organization Type",
       items: [
         {
-          name: "Healthcare",
-          icon: "/images/healthcare-icon.svg",
-          href: "/solutions/healthcare"
+            name: "County Party",
+            icon: "/icon/county-party-icon.svg",
+            href: "/solutions/county-party"
         },
         {
-          name: "Education",
-          icon: "/images/education-icon.svg",
-          href: "/solutions/education"
+            name: "State Party",
+            icon: "/icon/county-party-icon.svg",
+            href: "/solutions/state-party"
+        },
+        {
+            name: "Political Campaign",
+            icon: "/icon/political-campaign-icon.svg",
+            href: "/solutions/political-campaign"
+        },
+        {
+            name: "Non-Profit",
+            icon: "/icon/non-profit-icon.svg",
+            href: "/solutions/non-profit"
         },
         // Add more items...
       ]
     },
     {
-      heading: "By Team Size",
+      heading: "By Use Case",
       items: [
         {
-          name: "Enterprise",
-          icon: "/images/enterprise-icon.svg",
-          href: "/solutions/enterprise"
+            name: "Launching A Campaign",
+            icon: "/icon/launching-campaign-icon.svg",
+            href: "/solutions/launching-a-campaign"
         },
         {
-          name: "Small Business",
-          icon: "/images/small-business-icon.svg",
-          href: "/solutions/small-business"
+            name: "Community Fundraising",
+            icon: "/icon/community-fundraising-icon.svg",
+            href: "/solutions/community-fundraising"
+        },
+        {
+            name: "Training the Next Group of Campaign Staff",
+            icon: "/icon/training-staff-icon.svg",
+            href: "/solutions/training-staff"
+        },
+        {
+            name: "Expanding Public Awareness",
+            icon: "/icon/public-awareness-icon.svg",
+            href: "/solutions/public-awareness"
+        },
+        {
+            name: "Reinvigorating an Underserved District",
+            icon: "/icon/underserved-district-icon.svg",
+            href: "/solutions/underserved-district"
+        },
+        {
+            name: "Multi-County Collaboration",
+            icon: "/icon/collaboration-icon.svg",
+            href: "/solutions/multi-county-collaboration"
         },
         // Add more items...
       ]

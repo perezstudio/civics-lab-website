@@ -49,22 +49,24 @@ const NavBar = () => {
                 <button className="text-gray-800 hover:text-gray-600 px-3 py-2">
                   Products
                 </button>
-                <div className="absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <div className="p-4 space-y-4">
+                <div className="absolute left-0 mt-2 w-max min-w-[320px] max-w-[600px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="px-6 py-6 space-y-6">
                     {navigationItems.products.map((product) => (
                       <Link
                         key={product.name}
                         to={product.href}
-                        className="flex items-start space-x-4 p-3 hover:bg-gray-100 rounded-lg"
+                        className="block p-3 hover:bg-gray-100 rounded-lg"
                       >
-                        <img 
-                          src={product.icon} 
-                          alt="" 
-                          className="w-10 h-10"
-                        />
-                        <div>
-                          <div className="font-inter font-bold text-slate-950">{product.name}</div>
-                          <p className="font-inter font-medium text-sm text-slate-500">{product.description}</p>
+                        <div className="flex items-start space-x-4">
+                          <img 
+                            src={product.icon} 
+                            alt="" 
+                            className="flex-shrink-0 w-10 h-10"
+                          />
+                          <div className="flex-shrink-0">
+                            <div className="font-inter font-bold text-slate-950">{product.name}</div>
+                            <p className="font-inter font-medium text-sm text-slate-500 whitespace-nowrap">{product.description}</p>
+                          </div>
                         </div>
                       </Link>
                     ))}
@@ -81,22 +83,22 @@ const NavBar = () => {
                   <div className="p-6">
                     {navigationItems.solutions.map((section) => (
                       <div key={section.heading} className="mb-8 last:mb-0">
-                        <h3 className="font-semibold text-gray-900 mb-3">
+                        <h3 className="font-semibold text-sm uppercase text-slate-800 px-3 mb-3">
                           {section.heading}
                         </h3>
-                        <div className="grid grid-cols-2 gap-2">
+                        <div className="grid grid-cols-2 gap-3">
                           {section.items.map((item) => (
                             <Link
                               key={item.name}
                               to={item.href}
-                              className="flex items-center space-x-3 px-3 py-2 hover:bg-gray-50 rounded-lg"
+                              className="flex items-center space-x-4 px-3 py-2 hover:bg-gray-50 rounded-lg"
                             >
                               <img 
                                 src={item.icon} 
                                 alt="" 
-                                className="w-5 h-5"
+                                className="w-6 h-6"
                               />
-                              <span className="text-gray-700">{item.name}</span>
+                              <span className="text-slate-900 font-bold text-base">{item.name}</span>
                             </Link>
                           ))}
                         </div>
