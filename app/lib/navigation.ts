@@ -42,7 +42,7 @@ export const navigationItems = {
     },
     {
         name: "Advocacy Ink",
-        description: "Printing & Promotional Products Service",
+        description: "Coming Soon - Summer 2025",
         icon: "/images/advocacy-ink.svg",
         href: "/products/advocacy-ink"
     },

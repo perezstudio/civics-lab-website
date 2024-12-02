@@ -77,14 +77,14 @@ const NavBar = () => {
                 <button className="text-gray-800 hover:text-gray-600 px-3 py-2">
                   Solutions
                 </button>
-                <div className="absolute left-0 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <div className="p-4">
+                <div className="absolute left-0 mt-2 w-[600px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="p-6">
                     {navigationItems.solutions.map((section) => (
-                      <div key={section.heading} className="mb-6 last:mb-0">
-                        <h3 className="font-semibold text-gray-900 px-3 mb-2">
+                      <div key={section.heading} className="mb-8 last:mb-0">
+                        <h3 className="font-semibold text-gray-900 mb-3">
                           {section.heading}
                         </h3>
-                        <div className="space-y-1">
+                        <div className="grid grid-cols-2 gap-2">
                           {section.items.map((item) => (
                             <Link
                               key={item.name}
