@@ -36,14 +36,14 @@ const ContentSection: FC<ContentSectionProps> = ({
   image,
 }) => {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden px-8 py-20">
+      <div className="mx-auto max-w-7xl w-full">
         <div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:items-center">
           {/* Content Side */}
           <div className="max-w-xl">
             {/* Optional Subheading */}
             {subheading && (
-              <span className="block text-blue-600 font-caveat font-bold text-xl mb-3">
+              <span className="block text-blue-600 font-caveat font-bold text-xl">
                 {subheading}
               </span>
             )}
@@ -51,14 +51,14 @@ const ContentSection: FC<ContentSectionProps> = ({
             {/* Optional Service */}
             {service && (
               <div className="flex items-center space-x-2 mb-4">
-                <div className="flex-shrink-0 h-6 w-6">
+                <div className="flex-shrink-0 h-7 w-7">
                   <img 
                     src={service.iconSrc}
                     alt=""
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <span className={`font-medium ${serviceColors[service.name]}`}>
+                <span className={`font-caveat font-bold text-xl ${serviceColors[service.name]}`}>
                   {service.name}
                 </span>
               </div>
