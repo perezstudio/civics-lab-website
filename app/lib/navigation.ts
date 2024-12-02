@@ -17,16 +17,40 @@ export interface SolutionSection {
 export const navigationItems = {
   products: [
     {
-      name: "Analytics Platform",
-      description: "Get a better understanding of your traffic",
-      icon: "/images/analytics-icon.svg",
-      href: "/products/analytics"
+        name: "Compass",
+        description: "Campaign Manager Service",
+        icon: "/images/compass.svg",
+        href: "/products/compass"
     },
     {
-      name: "Engagement Suite",
-      description: "Speak directly to your customers",
-      icon: "/images/engagement-icon.svg",
-      href: "/products/engagement"
+        name: "Help Desk",
+        description: "Community & Aid Service",
+        icon: "/images/help-desk.svg",
+        href: "/products/help-desk"
+    },
+    {
+        name: "Pathway",
+        description: "Education & Training Service",
+        icon: "/images/pathway.svg",
+        href: "/products/pathway"
+    },
+    {
+        name: "Engage",
+        description: "CRM & Engagement Service",
+        icon: "/images/engage.svg",
+        href: "/products/engage"
+    },
+    {
+        name: "Advocacy Ink",
+        description: "Printing & Promotional Products Service",
+        icon: "/images/advocacy-ink.svg",
+        href: "/products/advocacy-ink"
+    },
+    {
+        name: "Progressive Pixels",
+        description: "Coming Soon - Fall 2025",
+        icon: "/images/pixels.svg",
+        href: "/products/progressive-pixels"
     },
     // Add more products...
   ],

@@ -3,7 +3,7 @@ import { Link } from '@remix-run/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Button from './ui/button'
-import { navigationItems } from '~/lib/navigation'
+import { navigationItems } from '../lib/navigation'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -55,16 +55,16 @@ const NavBar = () => {
                       <Link
                         key={product.name}
                         to={product.href}
-                        className="flex items-start space-x-4 p-3 hover:bg-gray-50 rounded-lg"
+                        className="flex items-start space-x-4 p-3 hover:bg-gray-100 rounded-lg"
                       >
                         <img 
                           src={product.icon} 
                           alt="" 
-                          className="w-6 h-6 mt-1"
+                          className="w-10 h-10"
                         />
                         <div>
-                          <div className="font-medium text-gray-900">{product.name}</div>
-                          <p className="text-sm text-gray-500">{product.description}</p>
+                          <div className="font-inter font-bold text-slate-950">{product.name}</div>
+                          <p className="font-inter font-medium text-sm text-slate-500">{product.description}</p>
                         </div>
                       </Link>
                     ))}
