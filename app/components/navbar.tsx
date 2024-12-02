@@ -46,7 +46,7 @@ const NavBar = () => {
             <div className="flex items-center space-x-8">
               {/* Products Dropdown */}
               <div className="relative group">
-                <button className="text-gray-800 hover:text-gray-600 px-3 py-2">
+                <button className="font-semibold text-slate-950 hover:text-slate-600 px-3 py-2">
                   Products
                 </button>
                 <div className="absolute left-0 mt-2 w-max min-w-[320px] max-w-[600px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -76,7 +76,7 @@ const NavBar = () => {
 
               {/* Solutions Dropdown */}
               <div className="relative group">
-                <button className="text-gray-800 hover:text-gray-600 px-3 py-2">
+                <button className="font-semibold text-slate-950 hover:text-slate-600 px-3 py-2">
                   Solutions
                 </button>
                 <div className="absolute left-0 mt-2 w-[600px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
