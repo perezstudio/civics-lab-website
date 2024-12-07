@@ -20,7 +20,7 @@ const Footer: FC = () => {
         </div>
 
         {/* Center - Copyright */}
-        <div className="text-sm text-gray-500">
+        <div className="text-sm font-medium text-gray-500">
           © 2025 Civics Lab, LLC.
         </div>
 
