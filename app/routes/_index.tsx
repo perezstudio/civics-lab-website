@@ -128,6 +128,24 @@ export default function Index() {
           alt: "Screen Printing"
         }}
       />
+      <ContentSection
+        id="call-to-action"
+        heading="Start Building Your Movement Today"
+        body="Create an account instantly to get started, or contact us to design a custom solution tailored to your campaign or organization."
+        primaryButton={{
+          text: "Start Now",
+          type: "primary",
+          trailingIcon: ArrowRight
+        }}
+        secondaryButton={{
+          text: "Contact Sales",
+          type: "secondary"
+        }}
+        image={{
+          src: "/images/call-to-action-image.jpg",
+          alt: "Team Planning Session"
+        }}
+      />
     </div>
   );
 }
