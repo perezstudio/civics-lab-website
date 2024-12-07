@@ -9,7 +9,7 @@ import {
 const Footer: FC = () => {
   return (
     <footer className="bg-slate-50 px-8 py-10">
-      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-0 md:justify-between">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-0 md:justify-between">
         {/* Left - Logo */}
         <div className="flex-shrink-0">
           <img 
