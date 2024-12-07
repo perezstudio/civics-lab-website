@@ -112,7 +112,7 @@ const NavBar = () => {
 
           {/* Desktop Navigation - Right Side */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button type="ghost" to="/login">Login</Button>
+            <Button type="secondary" to="/login">Login</Button>
             <Button type="primary" to="/contact">Contact Sales</Button>
           </div>
         </div>

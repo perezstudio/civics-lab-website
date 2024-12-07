@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Button from '~/components/ui/button'
-import { ArrowDownIcon } from '@heroicons/react/24/outline'
+import { ArrowDown } from 'lucide-react'
 
 interface HeaderProps {
   subheading: string
@@ -33,25 +33,25 @@ return (
             <div className="h-full lg:grid lg:grid-cols-2 lg:gap-10 lg:items-center">
                 {/* Content Section */}
                 <div className="relative z-10">
-                    <div className="sm:text-center lg:text-left">
-                    <span className="font-caveat font-bold text-blue-600 text-xl">
-                        {subheading}
-                    </span>
-                    <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                        {heading}
-                    </h1>
-                    <p className="text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0">
-                        {description}
-                    </p>
-                    <div className="">
-                        <Button 
-                        type="primary"
-                        onClick={scrollToNextSection}
-                        trailingIcon={<ArrowDownIcon className="h-4 w-4" />}
-                        >
-                        {buttonText}
-                        </Button>
-                    </div>
+                    <div className="flex flex-col gap-6 sm:text-center lg:text-left">
+                        <span className="font-caveat font-bold text-blue-600 text-xl">
+                            {subheading}
+                        </span>
+                        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            {heading}
+                        </h1>
+                        <p className="text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0">
+                            {description}
+                        </p>
+                        <div className="">
+                            <Button 
+                            type="primary"
+                            onClick={scrollToNextSection}
+                            TrailingIcon={ArrowDown}
+                            >
+                            {buttonText}
+                            </Button>
+                        </div>
                     </div>
                 </div>
 

@@ -2,6 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import Header from "~/components/header";
 import ContentSection from '~/components/content-section'
 import { BeakerIcon } from '@heroicons/react/24/outline'
+import { ArrowRight } from 'lucide-react';
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,6 +24,7 @@ export default function Index() {
         nextSectionId="features"
       />
       <ContentSection
+        id="features"
         subheading="Modular Solutions"
         heading="A Fully Integrated Suite of Campaign and Civic Engagement Tools"
         body="Streamline operations, empower your team, and grow your impact with a fully integrated platform. Use Civics Lab to manage campaign strategy, organize grassroots efforts, and launch (or reinvent) your approach to civic engagement and party building."
@@ -32,6 +34,7 @@ export default function Index() {
         }}
       />
       <ContentSection
+        id="compass"
         service={{
           name: "Compass",
           iconSrc: "/images/compass.svg"
@@ -40,7 +43,9 @@ export default function Index() {
         body="Compass is your partner for campaign success. Designed for smaller campaigns, it offers expert planning, strategy, and a la carte services. From refining messaging to managing logistics, Compass helps you focus on connecting with your community and achieving your goals."
         primaryButton={{
           text: "Start With Compass",
-          to: "/products/compass"
+          to: "/products/compass",
+          type: "compass",
+          trailingIcon: ArrowRight
         }}
         image={{
           src: "/images/teamwork.jpg",
@@ -48,6 +53,7 @@ export default function Index() {
         }}
       />
       <ContentSection
+        id="helpdesk"
         service={{
           name: "Help Desk",
           iconSrc: "/images/help-desk.svg"
@@ -56,7 +62,9 @@ export default function Index() {
         body="Help Desk is your dedicated resource for county parties and political campaigns. From answering questions to providing expert guidance, our community-driven service ensures you have the support you need to overcome challenges and stay on track. Empower your team with reliable assistance, whenever and wherever you need it."
         primaryButton={{
           text: "Start With Help Desk",
-          to: "/products/help-desk"
+          to: "/products/help-desk",
+          type: "helpdesk",
+          trailingIcon: ArrowRight
         }}
         image={{
           src: "/images/tech-support.jpg",
@@ -64,6 +72,7 @@ export default function Index() {
         }}
       />
       <ContentSection
+        id="engage"
         service={{
           name: "Engage",
           iconSrc: "/images/engage.svg"
@@ -72,7 +81,9 @@ export default function Index() {
         body="Engage is a purpose-built CRM designed to help county parties strengthen relationships with community members, local businesses, and donors. Streamline communications, track interactions, and organize your outreach efforts in one intuitive platform. With Engage, you can focus on growing your network and making a greater impact in your community."
         primaryButton={{
           text: "Start With Engage",
-          to: "/products/engage"
+          to: "/products/engage",
+          type: "engage",
+          trailingIcon: ArrowRight
         }}
         image={{
           src: "/images/presentation.jpg",
@@ -80,6 +91,7 @@ export default function Index() {
         }}
       />
       <ContentSection
+        id="pathway"
         service={{
           name: "Pathway",
           iconSrc: "/images/pathway.svg"
@@ -88,7 +100,9 @@ export default function Index() {
         body="Pathway is an educational hub designed to train and inspire the next generation of campaign staff and civic leaders. Offering resources, courses, and expert guidance, Pathway equips aspiring progressives with the skills and knowledge to drive meaningful change. Empower your journey and pave the way for a stronger, more informed future."
         primaryButton={{
           text: "Start With Pathway",
-          to: "/products/pathway"
+          to: "/products/pathway",
+          type: "pathway",
+          trailingIcon: ArrowRight
         }}
         image={{
           src: "/images/team-education.jpg",
@@ -96,6 +110,7 @@ export default function Index() {
         }}
       />
       <ContentSection
+        id="advocacyink"
         service={{
           name: "Advocacy Ink",
           iconSrc: "/images/advocacy-ink.svg"
@@ -104,7 +119,9 @@ export default function Index() {
         body="Advocacy Ink is your go-to progressive print shop, specializing in campaign materials and promotional products. From yard signs to custom apparel, we provide high-quality, impactful prints that amplify your message and energize your supporters. Let us help you bring your campaign to life with products that make a difference."
         primaryButton={{
           text: "Start With Advocacy Ink",
-          to: "/products/advocacy-ink"
+          to: "/products/advocacy-ink",
+          type: "advocacyink",
+          trailingIcon: ArrowRight
         }}
         image={{
           src: "/images/screen-printing.jpg",
