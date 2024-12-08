@@ -132,12 +132,12 @@ export default function CompassRoute() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <PricingCard
                         variant="secondary"
-                        title="Advanced"
+                        title="Starter"
                         productName="Compass"
                         price={{
                             dollars: 99,
                             cents: 99,
-                            period: "month"
+                            period: "Monthly / Per Team"
                         }}
                         includedItems={[
                             "Feature 1",
@@ -162,9 +162,9 @@ export default function CompassRoute() {
                         title="Advanced"
                         productName="Compass"
                         price={{
-                            dollars: 99,
+                            dollars: 199,
                             cents: 99,
-                            period: "month"
+                            period: "Monthly / Per Team"
                         }}
                         includedItems={[
                             "Feature 1",
@@ -186,12 +186,12 @@ export default function CompassRoute() {
                     />
                     <PricingCard
                         variant="secondary"
-                        title="Advanced"
+                        title="Pro"
                         productName="Compass"
                         price={{
-                            dollars: 99,
+                            dollars: 299,
                             cents: 99,
-                            period: "month"
+                            period: "Monthly / Per Team"
                         }}
                         includedItems={[
                             "Feature 1",

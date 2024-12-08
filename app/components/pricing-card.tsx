@@ -58,14 +58,17 @@ const PricingCard: FC<PricingCardProps> = ({
       variantStyles[variant][productName]
     )}>
       {/* Title */}
-      <h3 className="text-xl font-bold">{title}</h3>
+      <h3 className="text-4xl font-bold">{title}</h3>
 
       {/* Price Section */}
       <div className="flex flex-col gap-2">
-        <div className="flex items-baseline gap-1">
-          <span className="text-3xl font-bold">${price.dollars}</span>
-          <span className="text-lg">.{price.cents}</span>
-          <span className="text-sm text-slate-500">/{price.period}</span>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-top gap-0.5">
+            <span className="text-base">$</span>
+            <span className="text-6xl font-bold">{price.dollars}</span>
+            <span className="text-base">.{price.cents}</span>
+          </div>
+          <span className="text-xs font-semibold">{price.period}</span>
         </div>
       </div>
 
@@ -75,7 +78,10 @@ const PricingCard: FC<PricingCardProps> = ({
           <h4 className="font-semibold">What's included</h4>
           <ul className="flex flex-col gap-2">
             {includedItems.map((item, index) => (
-              <li key={index} className="text-sm text-slate-500">{item}</li>
+              <li key={index} className="text-sm flex items-center gap-2">
+                <span className="text-[0.6rem]">★</span>
+                {item}
+              </li>
             ))}
           </ul>
         </div>
@@ -87,7 +93,10 @@ const PricingCard: FC<PricingCardProps> = ({
           <h4 className="font-semibold">Features</h4>
           <ul className="flex flex-col gap-2">
             {features.map((feature, index) => (
-              <li key={index} className="text-sm text-slate-500">{feature}</li>
+              <li key={index} className="text-sm flex items-center gap-2">
+                <span className="text-[0.6rem]">★</span>
+                {feature}
+              </li>
             ))}
           </ul>
         </div>
