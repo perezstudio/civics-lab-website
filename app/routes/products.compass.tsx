@@ -4,6 +4,7 @@ import { ArrowRight, ChartNetwork, GitPullRequestArrow, GitPullRequestCreateArro
 import ProductHeader from "~/components/product-header"
 import ServiceGrid from "~/components/service-grid"
 import { MousePointerClick, CalendarClock, FileUser, ClipboardList } from 'lucide-react'
+import PricingCard from "~/components/pricing-card"
 
 export const meta: MetaFunction = () => {
   return [
@@ -124,6 +125,95 @@ export default function CompassRoute() {
             heading="Membership Benefits" 
             services={benefits}
         />
+        <section id="pricing" className="container mx-auto px-4 py-12 md:py-20">
+            <div className='max-w-7xl mx-auto w-full flex flex-col gap-8'>
+                <h2 className="text-4xl font-bold">Join Compass</h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <PricingCard
+                        variant="secondary"
+                        title="Advanced"
+                        productName="Compass"
+                        price={{
+                            dollars: 99,
+                            cents: 99,
+                            period: "month"
+                        }}
+                        includedItems={[
+                            "Feature 1",
+                            "Feature 2"
+                        ]}
+                        features={[
+                            "Advanced Feature 1",
+                            "Advanced Feature 2"
+                        ]}
+                        primaryButton={{
+                            text: "Get Started",
+                            type: "primary",
+                            to: "/signup"
+                        }}
+                        secondaryButton={{
+                            text: "Learn More",
+                            type: "secondary"
+                        }}
+                    />
+                    <PricingCard
+                        variant="primary"
+                        title="Advanced"
+                        productName="Compass"
+                        price={{
+                            dollars: 99,
+                            cents: 99,
+                            period: "month"
+                        }}
+                        includedItems={[
+                            "Feature 1",
+                            "Feature 2"
+                        ]}
+                        features={[
+                            "Advanced Feature 1",
+                            "Advanced Feature 2"
+                        ]}
+                        primaryButton={{
+                            text: "Get Started",
+                            type: "primary",
+                            to: "/signup"
+                        }}
+                        secondaryButton={{
+                            text: "Learn More",
+                            type: "secondary"
+                        }}
+                    />
+                    <PricingCard
+                        variant="secondary"
+                        title="Advanced"
+                        productName="Compass"
+                        price={{
+                            dollars: 99,
+                            cents: 99,
+                            period: "month"
+                        }}
+                        includedItems={[
+                            "Feature 1",
+                            "Feature 2"
+                        ]}
+                        features={[
+                            "Advanced Feature 1",
+                            "Advanced Feature 2"
+                        ]}
+                        primaryButton={{
+                            text: "Get Started",
+                            type: "primary",
+                            to: "/signup"
+                        }}
+                        secondaryButton={{
+                            text: "Learn More",
+                            type: "secondary"
+                        }}
+                    />
+                </div>
+            </div>
+        </section>
     </div>
   )
 } 
