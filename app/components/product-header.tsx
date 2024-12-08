@@ -38,7 +38,7 @@ const ProductHeader: FC<ProductHeaderProps> = ({
   image
 }) => {
   return (
-    <div className="px-4 sm:px-8 pt-12 sm:pt-20">
+    <header id="header" className="px-4 sm:px-8 pt-12 sm:pt-20">
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col items-center text-center gap-4 sm:gap-6">
           {/* Product Info */}
@@ -104,7 +104,7 @@ const ProductHeader: FC<ProductHeaderProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 

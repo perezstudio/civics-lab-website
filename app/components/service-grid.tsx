@@ -11,13 +11,14 @@ interface Service {
 }
 
 interface ServiceGridProps {
+  id?: string
   heading: string
   services: Service[]
 }
 
-const ServiceGrid: FC<ServiceGridProps> = ({ heading, services }) => {
+const ServiceGrid: FC<ServiceGridProps> = ({ heading, services, id }) => {
   return (
-    <section className="py-20 px-8">
+    <section id={id} className="container mx-auto px-4 py-12">
       <div className='max-w-7xl mx-auto w-full flex flex-col gap-8'>
         <h2 className="text-4xl font-bold">{heading}</h2>
         

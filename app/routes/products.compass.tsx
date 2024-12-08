@@ -1,9 +1,9 @@
 import { type MetaFunction } from "@remix-run/node"
 import ProductNavbar from '~/components/product-navbar'
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChartNetwork, GitPullRequestArrow, GitPullRequestCreateArrow, ImageUpscale, MapPinCheck, User } from "lucide-react"
 import ProductHeader from "~/components/product-header"
 import ServiceGrid from "~/components/service-grid"
-import { MousePointerClick, CalendarClock, FileUser } from 'lucide-react'
+import { MousePointerClick, CalendarClock, FileUser, ClipboardList } from 'lucide-react'
 
 export const meta: MetaFunction = () => {
   return [
@@ -37,21 +37,39 @@ export default function CompassRoute() {
 
     const benefits = [
         {
-            text: "1",
-            heading: "Subscribe to Your Plan",
-            body: "Choose a subscription plan that fits your campaign’s needs and get instant access to expert support.",
+            icon: ClipboardList,
+            heading: "Expert Guidance",
+            body: "Partner with experienced campaign specialists who understand the challenges of running and winning elections.",
             variant: "compass" as const
         },
         {
-            text: "2",
-            heading: "One-on-One Onboarding",
-            body: "Kick off your journey with a personalized onboarding call with a campaign specialist to align on your goals.",
+            icon: MapPinCheck,
+            heading: "Tailored Strategies",
+            body: "Receive customized campaign plans designed to meet your unique goals, community needs, and resource levels.",
             variant: "compass" as const
         },
         {
-            text: "3",
-            heading: "Custom Campaign Strategy",
-            body: "Work with us to craft a winning campaign strategy, then submit requests as needed while we handle the execution.",
+            icon: GitPullRequestCreateArrow,
+            heading: "Streamlined Operations",
+            body: "Save time and effort by outsourcing planning and execution to a trusted team, so you can focus on voter outreach.",
+            variant: "compass" as const
+        },
+        {
+            icon: ImageUpscale,
+            heading: "Scalable Support",
+            body: "Whether you’re managing a local race or a county-wide effort, our services scale to fit campaigns of any size.",
+            variant: "compass" as const
+        },
+        {
+            icon: User,
+            heading: "Proactive Problem-Solving",
+            body: "Tackle challenges head-on with actionable insights and real-time solutions to keep your campaign on track.",
+            variant: "compass" as const
+        },
+        {
+            icon: ChartNetwork,
+            heading: "Results-Oriented Approach",
+            body: "Drive meaningful engagement and measurable success with proven strategies that prioritize voter connection and turnout.",
             variant: "compass" as const
         },
     ]
@@ -64,10 +82,9 @@ export default function CompassRoute() {
           iconSrc: "/images/compass.svg"
         }}
         navItems={[
-          { label: "Overview", to: "overview" },
-          { label: "Features", to: "features" },
-          { label: "Pricing", to: "pricing" },
-          { label: "FAQ", to: "faq" }
+          { label: "Service", to: "service" },
+          { label: "Benefits", to: "benefits" },
+          { label: "Pricing", to: "pricing" }
         ]}
         button={{
           text: "Join The Waitlist",
@@ -98,10 +115,12 @@ export default function CompassRoute() {
         }}
         />
         <ServiceGrid 
+            id="service"
             heading="How do our services work?" 
             services={services} 
         />
         <ServiceGrid 
+            id="benefits"
             heading="Membership Benefits" 
             services={benefits}
         />

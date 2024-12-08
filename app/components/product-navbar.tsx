@@ -61,9 +61,21 @@ const ProductNavbar: FC<ProductNavbarProps> = ({
               alt={product.name}
               className="w-6 h-6"
             />
-            <span className="font-semibold text-gray-900">
-              {product.name}
-            </span>
+            <div className='flex flex-col'>
+                <span className="font-bold text-base text-slate-900">
+                    Civics Lab
+                </span>
+                <span className={cn(
+                    'font-caveat font-bold text-lg -mt-4',
+                    {
+                        'text-cyan-500': product.name === 'Compass',
+                        'text-violet-500': product.name === 'Help Desk',
+                        'text-teal-500': product.name === 'Engage',
+                        'text-lime-500': product.name === 'Pathway',
+                        'text-amber-500': product.name === 'Advocacy Ink',
+                    }
+                )}>{product.name}</span>
+            </div>
           </div>
 
           {/* Right - Nav Items & Button */}
@@ -74,7 +86,7 @@ const ProductNavbar: FC<ProductNavbarProps> = ({
                 <button
                   key={item.to}
                   onClick={() => scrollToSection(item.to)}
-                  className="text-sm text-gray-500 hover:text-gray-900"
+                  className="text-sm text-slate-900 hover:text-slate-900 font-semibold"
                 >
                   {item.label}
                 </button>
