@@ -18,7 +18,7 @@ interface ServiceGridProps {
 
 const ServiceGrid: FC<ServiceGridProps> = ({ heading, services, id }) => {
   return (
-    <section id={id} className="container mx-auto px-4 py-12">
+    <section id={id} className="container mx-auto px-4 py-12 md:py-20">
       <div className='max-w-7xl mx-auto w-full flex flex-col gap-8'>
         <h2 className="text-4xl font-bold">{heading}</h2>
         
