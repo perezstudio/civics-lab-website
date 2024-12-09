@@ -107,6 +107,33 @@ const NavBar = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Resources Dropdown */}
+              <div className="relative group">
+                <button className="font-semibold text-slate-950 hover:text-slate-600 px-3 py-2">
+                  Resources
+                </button>
+                <div className="absolute left-0 mt-2 w-[600px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="p-6">
+                    <div className="grid grid-cols-2 gap-3">
+                      {navigationItems.resources.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className="flex items-center space-x-4 px-3 py-2 hover:bg-gray-50 rounded-lg"
+                        >
+                          <img 
+                            src={item.icon} 
+                            alt="" 
+                            className="w-6 h-6"
+                          />
+                          <span className="text-slate-900 font-bold text-base">{item.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

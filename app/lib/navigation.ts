@@ -118,5 +118,28 @@ export const navigationItems = {
       ]
     },
     // Add more sections...
+  ],
+  resources: [
+    {
+        name: "About Us",
+        icon: "/icon/county-party-icon.svg",
+        href: "/about"
+    },
+    {
+        name: "Blog",
+        icon: "/icon/county-party-icon.svg",
+        href: "/blog"
+    },
+    {
+        name: "Help & Support",
+        icon: "/icon/political-campaign-icon.svg",
+        href: "/support"
+    },
+    {
+        name: "Contact Us",
+        icon: "/icon/non-profit-icon.svg",
+        href: "/contact"
+    },
+    // Add more sections...
   ]
 } as const; 

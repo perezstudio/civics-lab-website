@@ -78,7 +78,7 @@ const LargePricingCard: FC<LargePricingCardProps> = ({
       </div>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-1 mb-8">
         {features.map((feature, index) => (
           <div key={index} className="flex items-center gap-2">
             <span className="text-[0.6rem]">★</span>
