@@ -54,7 +54,7 @@ const PricingCard: FC<PricingCardProps> = ({
 
   return (
     <div className={cn(
-      'rounded-xl border-2 p-6 flex flex-col gap-6',
+      'rounded-xl border-2 p-8 flex flex-col gap-7',
       variantStyles[variant][productName]
     )}>
       {/* Title */}
@@ -74,9 +74,9 @@ const PricingCard: FC<PricingCardProps> = ({
 
       {/* What's Included Section */}
       {includedItems && includedItems.length > 0 && (
-        <div className="flex flex-col gap-3">
-          <h4 className="font-semibold">What's included</h4>
-          <ul className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
+          <h4 className="font-bold text-sm">What's included</h4>
+          <ul className="flex flex-col gap-1">
             {includedItems.map((item, index) => (
               <li key={index} className="text-sm flex items-center gap-2">
                 <span className="text-[0.6rem]">★</span>
@@ -89,9 +89,9 @@ const PricingCard: FC<PricingCardProps> = ({
 
       {/* Features Section */}
       {features && features.length > 0 && (
-        <div className="flex flex-col gap-3">
-          <h4 className="font-semibold">Features</h4>
-          <ul className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
+          <h4 className="font-bold text-sm">Features</h4>
+          <ul className="flex flex-col gap-1">
             {features.map((feature, index) => (
               <li key={index} className="text-sm flex items-center gap-2">
                 <span className="text-[0.6rem]">★</span>
@@ -103,7 +103,7 @@ const PricingCard: FC<PricingCardProps> = ({
       )}
 
       {/* Buttons */}
-      <div className="flex gap-3 mt-auto">
+      <div className="flex flex-col xl:flex-row gap-3 mt-auto">
         {primaryButton && (
           <Button
             type={primaryButton.type || 'primary'}

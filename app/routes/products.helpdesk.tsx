@@ -8,12 +8,12 @@ import PricingCard from "~/components/pricing-card"
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Compass | Civics Lab" },
-    { name: "description", content: "Guiding Smaller Campaigns to Bigger Wins" },
+    { title: "Help Desk | Civics Lab" },
+    { name: "description", content: "Support When You Need It Most" },
   ]
 }
 
-export default function CompassRoute() {
+export default function HelpDeskRoute() {
 
     const services = [
         {
@@ -79,8 +79,8 @@ export default function CompassRoute() {
     <div>
       <ProductNavbar
         product={{
-          name: "Compass",
-          iconSrc: "/images/compass.svg"
+          name: "Help Desk",
+          iconSrc: "/images/help-desk.svg"
         }}
         navItems={[
           { label: "Service", to: "service" },
@@ -89,7 +89,7 @@ export default function CompassRoute() {
         ]}
         button={{
           text: "Join The Waitlist",
-          type: "compass",
+          type: "helpdesk",
           to: "/signup",
           trailingIcon: ArrowRight
         }}
@@ -97,13 +97,13 @@ export default function CompassRoute() {
       <ProductHeader
         subheading={{
           text: "Navigate Your Campaign to Success",
-          style: "text-cyan-500"
+          style: "text-violet-500"
         }}
         heading="Guiding Smaller Campaigns to Bigger Wins"
         body="Compass is your partner for campaign success. Designed for smaller campaigns, it offers expert planning, strategy, and a la carte services."
         primaryButton={{
             text: "Join The Waitlist",
-            type: "compass",
+            type: "helpdesk",
             trailingIcon: ArrowRight
         }}
         secondaryButton={{
@@ -118,12 +118,14 @@ export default function CompassRoute() {
         <ServiceGrid 
             id="service"
             heading="How do our services work?" 
-            services={services} 
+            services={services}
+            variant="helpdesk"
         />
         <ServiceGrid 
             id="benefits"
             heading="Membership Benefits" 
             services={benefits}
+            variant="helpdesk"
         />
         <section id="pricing" className="container mx-auto px-4 py-12 md:py-20">
             <div className='max-w-7xl mx-auto w-full flex flex-col gap-8'>
@@ -133,7 +135,7 @@ export default function CompassRoute() {
                     <PricingCard
                         variant="secondary"
                         title="Starter"
-                        productName="Compass"
+                        productName="Help Desk"
                         price={{
                             dollars: 99,
                             cents: 99,
@@ -160,7 +162,7 @@ export default function CompassRoute() {
                     <PricingCard
                         variant="primary"
                         title="Advanced"
-                        productName="Compass"
+                        productName="Help Desk"
                         price={{
                             dollars: 199,
                             cents: 99,
@@ -187,7 +189,7 @@ export default function CompassRoute() {
                     <PricingCard
                         variant="secondary"
                         title="Pro"
-                        productName="Compass"
+                        productName="Help Desk"
                         price={{
                             dollars: 299,
                             cents: 99,

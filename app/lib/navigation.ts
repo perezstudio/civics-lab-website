@@ -26,7 +26,7 @@ export const navigationItems = {
         name: "Help Desk",
         description: "Community & Aid Service",
         icon: "/images/help-desk.svg",
-        href: "/products/help-desk"
+        href: "/products/helpdesk"
     },
     {
         name: "Pathway",

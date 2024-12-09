@@ -14,15 +14,16 @@ interface ServiceGridProps {
   id?: string
   heading: string
   services: Service[]
+  variant?: 'compass' | 'helpdesk' | 'engage' | 'pathway' | 'advocacyink'
 }
 
-const ServiceGrid: FC<ServiceGridProps> = ({ heading, services, id }) => {
+const ServiceGrid: FC<ServiceGridProps> = ({ heading, services, id, variant }) => {
   return (
     <section id={id} className="container mx-auto px-4 py-12 md:py-20">
       <div className='max-w-7xl mx-auto w-full flex flex-col gap-8'>
         <h2 className="text-4xl font-bold">{heading}</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service, index) => (
             <DetailCard
                 key={index}
@@ -30,7 +31,7 @@ const ServiceGrid: FC<ServiceGridProps> = ({ heading, services, id }) => {
                 text={service.text}
                 heading={service.heading}
                 body={service.body}
-                variant={service.variant}
+                variant={variant || service.variant}
             />
             ))}
         </div>
