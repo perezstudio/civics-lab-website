@@ -14,11 +14,12 @@ interface PricingCardProps {
   title: string
   variant?: 'primary' | 'secondary'
   productName: ServiceName
-  price: {
-    dollars: number
-    cents: number
-    period: string
+  price?: {
+    dollars?: number
+    cents?: number
+    period?: string
   }
+  text?: string
   includedItems?: string[]
   features?: string[]
   primaryButton?: ButtonProps
@@ -30,6 +31,7 @@ const PricingCard: FC<PricingCardProps> = ({
   variant = 'secondary',
   productName,
   price,
+  text,
   includedItems,
   features,
   primaryButton,
@@ -62,13 +64,17 @@ const PricingCard: FC<PricingCardProps> = ({
 
       {/* Price Section */}
       <div className="flex flex-col gap-2">
-        <div className="flex flex-col gap-2">
-          <div className="flex items-top gap-0.5">
-            <span className="text-base">$</span>
-            <span className="text-6xl font-bold">{price.dollars}</span>
-            <span className="text-base">.{price.cents}</span>
-          </div>
-          <span className="text-xs font-semibold">{price.period}</span>
+        <div className="flex items-top gap-1">
+          {text ? (
+            <span className="text-6xl font-bold">{text}</span>
+          ) : (
+            <>
+                <span className="text-base">$</span>
+              {price?.dollars && <span className="text-6xl font-bold">{price.dollars}</span>}
+              {price?.cents && <span className="text-base">.{price.cents}</span>}
+              {price?.period && <span className="text-xs font-semibold">/{price.period}</span>}
+            </>
+          )}
         </div>
       </div>
 

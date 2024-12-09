@@ -27,7 +27,7 @@ const DetailCard = memo<DetailCardProps>(({
     body
 }) => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-2">
         <div className={cn(
             'border-2 rounded-lg p-4 w-14 h-14 flex items-center justify-center',
             variantStyles[variant]

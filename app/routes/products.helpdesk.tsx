@@ -18,60 +18,60 @@ export default function HelpDeskRoute() {
     const services = [
         {
             text: "1",
-            heading: "Subscribe to Your Plan",
-            body: "Choose a subscription plan that fits your campaign’s needs and get instant access to expert support.",
-            variant: "compass" as const
+            heading: "Join the Community",
+            body: "Sign up for free to connect with party leaders, candidates, and campaign staff across the country. Share advice, ask questions, and find support in a collaborative environment.",
+            variant: "helpdesk" as const
         },
         {
             text: "2",
-            heading: "One-on-One Onboarding",
-            body: "Kick off your journey with a personalized onboarding call with a campaign specialist to align on your goals.",
-            variant: "compass" as const
+            heading: "Access Resources & Training",
+            body: "Tap into a library of educational materials, attend training events, and learn practical strategies for running campaigns and managing operations effectively.",
+            variant: "helpdesk" as const
         },
         {
             text: "3",
-            heading: "Custom Campaign Strategy",
-            body: "Work with us to craft a winning campaign strategy, then submit requests as needed while we handle the execution.",
-            variant: "compass" as const
+            heading: "Get Direct Support",
+            body: "Upgrade to the Plus tier for exclusive training sessions and async direct message support to address your specific needs and challenges.",
+            variant: "helpdesk" as const
         },
     ]
 
     const benefits = [
         {
             icon: ClipboardList,
-            heading: "Expert Guidance",
-            body: "Partner with experienced campaign specialists who understand the challenges of running and winning elections.",
-            variant: "compass" as const
+            heading: "Nationwide Community",
+            body: "Connect with party leaders, candidates, and campaign staff from across the country for advice, collaboration, and shared experiences.",
+            variant: "helpdesk" as const
         },
         {
             icon: MapPinCheck,
-            heading: "Tailored Strategies",
-            body: "Receive customized campaign plans designed to meet your unique goals, community needs, and resource levels.",
-            variant: "compass" as const
+            heading: "Expert Training",
+            body: "Access training events led by experienced professionals to gain insights into campaign management and party operations.",
+            variant: "helpdesk" as const
         },
         {
             icon: GitPullRequestCreateArrow,
-            heading: "Streamlined Operations",
-            body: "Save time and effort by outsourcing planning and execution to a trusted team, so you can focus on voter outreach.",
-            variant: "compass" as const
+            heading: "Comprehensive Resources",
+            body: "Explore a library of educational materials designed to help you tackle challenges and streamline your efforts.",
+            variant: "helpdesk" as const
         },
         {
             icon: ImageUpscale,
-            heading: "Scalable Support",
-            body: "Whether you’re managing a local race or a county-wide effort, our services scale to fit campaigns of any size.",
-            variant: "compass" as const
+            heading: "Question Forums",
+            body: "Participate in forums to get answers to your pressing questions and share your expertise with others.",
+            variant: "helpdesk" as const
         },
         {
             icon: User,
-            heading: "Proactive Problem-Solving",
-            body: "Tackle challenges head-on with actionable insights and real-time solutions to keep your campaign on track.",
-            variant: "compass" as const
+            heading: "Exclusive Plus Tier Perks",
+            body: "Enjoy enhanced benefits, including advanced training sessions and personalized support through async direct messaging.",
+            variant: "helpdesk" as const
         },
         {
             icon: ChartNetwork,
-            heading: "Results-Oriented Approach",
-            body: "Drive meaningful engagement and measurable success with proven strategies that prioritize voter connection and turnout.",
-            variant: "compass" as const
+            heading: "Affordable Access",
+            body: "Choose from a free plan or an affordable Plus tier to get the level of support and resources that fit your needs.",
+            variant: "helpdesk" as const
         },
     ]
 
@@ -96,23 +96,19 @@ export default function HelpDeskRoute() {
       />
       <ProductHeader
         subheading={{
-          text: "Navigate Your Campaign to Success",
+          text: "Support, Connection, and Guidance for Your Campaign",
           style: "text-violet-500"
         }}
-        heading="Guiding Smaller Campaigns to Bigger Wins"
-        body="Compass is your partner for campaign success. Designed for smaller campaigns, it offers expert planning, strategy, and a la carte services."
+        heading="A Community to Empower \n County Parties and Campaigns"
+        body="Help Desk is your trusted hub for support, connection, and education. Designed for county parties and political campaigns, it offers a digital community, question forums, training events, and educational materials to help you thrive. Whether you’re seeking advice, learning new skills, or building connections, Help Desk ensures you have the tools and community you need to succeed."
         primaryButton={{
             text: "Join The Waitlist",
             type: "helpdesk",
             trailingIcon: ArrowRight
         }}
-        secondaryButton={{
-            text: "Contact Sales",
-            type: "secondary"
-        }}
         image={{
-            src: "/images/compass-banner.jpg",
-            alt: "Campaign Management Team"
+            src: "/images/helpdesk-banner.jpg",
+            alt: "Community Together"
         }}
         />
         <ServiceGrid 
@@ -131,23 +127,20 @@ export default function HelpDeskRoute() {
             <div className='max-w-7xl mx-auto w-full flex flex-col gap-8'>
                 <h2 className="text-4xl font-bold">Join Compass</h2>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <PricingCard
                         variant="secondary"
-                        title="Starter"
+                        title="Community"
                         productName="Help Desk"
                         price={{
-                            dollars: 99,
-                            cents: 99,
+                            dollars: 0,
+                            cents: 0,
                             period: "Monthly / Per Team"
                         }}
                         includedItems={[
-                            "Feature 1",
-                            "Feature 2"
-                        ]}
-                        features={[
-                            "Advanced Feature 1",
-                            "Advanced Feature 2"
+                            "Access to the digital community.",
+                            "Participation in question forums",
+                            "Basic educational materials and resources"
                         ]}
                         primaryButton={{
                             text: "Join The Waitlist",
@@ -155,53 +148,23 @@ export default function HelpDeskRoute() {
                             to: "/signup"
                         }}
                         secondaryButton={{
-                            text: "Learn More",
+                            text: "Book A Call",
                             type: "secondary"
                         }}
                     />
                     <PricingCard
                         variant="primary"
-                        title="Advanced"
+                        title="Plus"
                         productName="Help Desk"
                         price={{
-                            dollars: 199,
+                            dollars: 49,
                             cents: 99,
                             period: "Monthly / Per Team"
                         }}
                         includedItems={[
-                            "Feature 1",
-                            "Feature 2"
-                        ]}
-                        features={[
-                            "Advanced Feature 1",
-                            "Advanced Feature 2"
-                        ]}
-                        primaryButton={{
-                            text: "Join The Waitlist",
-                            type: "primary",
-                            to: "/signup"
-                        }}
-                        secondaryButton={{
-                            text: "Learn More",
-                            type: "secondary"
-                        }}
-                    />
-                    <PricingCard
-                        variant="secondary"
-                        title="Pro"
-                        productName="Help Desk"
-                        price={{
-                            dollars: 299,
-                            cents: 99,
-                            period: "Monthly / Per Team"
-                        }}
-                        includedItems={[
-                            "Feature 1",
-                            "Feature 2"
-                        ]}
-                        features={[
-                            "Advanced Feature 1",
-                            "Advanced Feature 2"
+                            "Exclusive access to advanced training events tailored to campaign needs.",
+                            "Direct asynchronous messaging support for personalized help.",
+                            "Premium educational materials with in-depth strategies and tools."
                         ]}
                         primaryButton={{
                             text: "Join The Waitlist",
