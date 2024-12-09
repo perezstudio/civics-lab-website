@@ -98,7 +98,7 @@ export default function EngageRoute() {
             ]
         },
         "Starter": {
-            description: "(District under 100k)",
+            description: "(District under 150k)",
             price: {
                 dollars: 99,
                 cents: 99,
@@ -139,10 +139,31 @@ export default function EngageRoute() {
                 "Comprehensive data-sharing tools for collaboration with other counties and candidates."
             ]
         },
-        "Enterprise": {
-            description: "(District over 250k)",
+        "Advanced": {
+            description: "(District under 500K)",
             price: {
-            dollars: 299,
+            dollars: 399,
+            cents: 99,
+            period: "Monthly / per Team"
+            },
+            features: [
+                "Basic contact and donor tracking tools.",
+                "Sync data with NGP VAN for streamlined operations.",
+                "Budget tracking for effective financial management.",
+                "Event management features like RSVP tracking and QR code sign-ins.",
+                "Enhanced reporting tools for deeper insights.",
+                "Dynamic form embeds for event submissions.",
+                "Custom list creation and CSV export functionality.",
+                "Advanced work plan and project tracking with task assignments.",
+                "Integration with Mobilize for event promotion and RSVPs.",
+                "Priority support and personalized onboarding.",
+                "Comprehensive data-sharing tools for collaboration with other counties and candidates."
+            ]
+        },
+        "Premium": {
+            description: "(District over 1 Million)",
+            price: {
+            dollars: 699,
             cents: 99,
             period: "Monthly / per Team"
             },
