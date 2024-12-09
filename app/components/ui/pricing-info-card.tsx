@@ -19,7 +19,7 @@ const PricingInfoCard: FC<PricingInfoCardProps> = ({
 
   return (
     <div className={cn(
-      'rounded-2xl border p-8 shadow-sm flex flex-col gap-4',
+      'rounded-2xl border p-8 shadow-sm flex flex-col gap-4 h-full justify-between',
       variantStyles[variant],
       className
     )}>
