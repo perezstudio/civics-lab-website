@@ -1,4 +1,5 @@
 export const serviceColors = {
+  'Global': 'text-blue-500',
   'Compass': 'text-cyan-500',
   'Help Desk': 'text-violet-500',
   'Engage': 'text-teal-500',

@@ -65,7 +65,7 @@ const LargePricingCard: FC<LargePricingCardProps> = ({
         </div>
 
         {/* Right Side - Pricing */}
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-start lg:items-end">
           <div className="flex items-start">
             <span className="text-base">$</span>
             <span className="text-6xl font-bold">{price.dollars}</span>

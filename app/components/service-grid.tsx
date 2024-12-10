@@ -7,14 +7,14 @@ interface Service {
   text?: string
   heading: string
   body: string
-  variant?: 'compass' | 'helpdesk' | 'engage' | 'pathway' | 'advocacyink'
+  variant?: 'global' | 'compass' | 'helpdesk' | 'engage' | 'pathway' | 'advocacyink'
 }
 
 interface ServiceGridProps {
   id?: string
   heading: string
   services: Service[]
-  variant?: 'compass' | 'helpdesk' | 'engage' | 'pathway' | 'advocacyink'
+  variant?: 'global' | 'compass' | 'helpdesk' | 'engage' | 'pathway' | 'advocacyink'
 }
 
 const ServiceGrid: FC<ServiceGridProps> = ({ heading, services, id, variant }) => {

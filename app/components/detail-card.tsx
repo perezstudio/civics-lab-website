@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { cn } from '~/utils/cn'
 
-type ProductVariant = 'compass' | 'helpdesk' | 'engage' | 'pathway' | 'advocacyink'
+type ProductVariant = 'global' | 'compass' | 'helpdesk' | 'engage' | 'pathway' | 'advocacyink'
 
 interface DetailCardProps {
   icon?: React.ComponentType<{ className?: string }>
@@ -12,6 +12,7 @@ interface DetailCardProps {
 }
 
 const variantStyles: Record<ProductVariant, string> = {
+    global: 'text-blue-500 bg-blue-100 border-blue-500',
     compass: 'text-cyan-500 bg-cyan-100 border-cyan-500',
     helpdesk: 'text-violet-500 bg-violet-100 border-violet-500',
     engage: 'text-teal-500 bg-teal-100 border-teal-500',
