@@ -74,7 +74,7 @@ const NavBar = () => {
                 </div>
               </div>
 
-              {/* Solutions Dropdown */}
+              {/* Solutions Dropdown
               <div className="relative group">
                 <button className="font-semibold text-slate-950 hover:text-slate-600 px-3 py-2">
                   Solutions
@@ -106,9 +106,9 @@ const NavBar = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              {/* Resources Dropdown */}
+              {/* Resources Dropdown
               <div className="relative group">
                 <button className="font-semibold text-slate-950 hover:text-slate-600 px-3 py-2">
                   Resources
@@ -133,13 +133,13 @@ const NavBar = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Desktop Navigation - Right Side */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button type="secondary" to="/login">Login</Button>
+            {/* <Button type="secondary" to="/login">Login</Button> */}
             <Button type="primary" to="/contact">Contact Sales</Button>
           </div>
         </div>

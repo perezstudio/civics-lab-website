@@ -99,7 +99,7 @@ export default function HelpDeskRoute() {
           text: "Support, Connection, and Guidance for Your Campaign",
           style: "text-violet-500"
         }}
-        heading="A Community to Empower \n County Parties and Campaigns"
+        heading="A Community to Empower County Parties and Campaigns"
         body="Help Desk is your trusted hub for support, connection, and education. Designed for county parties and political campaigns, it offers a digital community, question forums, training events, and educational materials to help you thrive. Whether you’re seeking advice, learning new skills, or building connections, Help Desk ensures you have the tools and community you need to succeed."
         primaryButton={{
             text: "Join The Waitlist",
@@ -132,11 +132,7 @@ export default function HelpDeskRoute() {
                         variant="secondary"
                         title="Community"
                         productName="Help Desk"
-                        price={{
-                            dollars: 0,
-                            cents: 0,
-                            period: "Monthly / Per Team"
-                        }}
+                        text="Free"
                         includedItems={[
                             "Access to the digital community.",
                             "Participation in question forums",
