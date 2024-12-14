@@ -74,7 +74,7 @@ const NavBar = () => {
                 </div>
               </div>
 
-              {/* Solutions Dropdown
+              {/* Solutions Dropdown */}
               <div className="relative group">
                 <button className="font-semibold text-slate-950 hover:text-slate-600 px-3 py-2">
                   Solutions
@@ -106,9 +106,9 @@ const NavBar = () => {
                     ))}
                   </div>
                 </div>
-              </div> */}
+              </div>
 
-              {/* Resources Dropdown
+              {/* Resources Dropdown */}
               <div className="relative group">
                 <button className="font-semibold text-slate-950 hover:text-slate-600 px-3 py-2">
                   Resources
@@ -133,7 +133,7 @@ const NavBar = () => {
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
 
