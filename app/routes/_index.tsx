@@ -62,7 +62,7 @@ export default function Index() {
         body="Help Desk is your dedicated resource for county parties and political campaigns. From answering questions to providing expert guidance, our community-driven service ensures you have the support you need to overcome challenges and stay on track. Empower your team with reliable assistance, whenever and wherever you need it."
         primaryButton={{
           text: "Start With Help Desk",
-          to: "/products/help-desk",
+          to: "/products/helpdesk",
           type: "helpdesk",
           trailingIcon: ArrowRight
         }}
